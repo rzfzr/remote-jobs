@@ -26,7 +26,7 @@ html_bookmarks += create_subfolder("Extracted Jobs", date_stamp)
 with open('README.md', 'r', encoding='utf-8', errors='ignore') as md_file:
     for line in md_file:
         parts = line.split(' | ')
-        if len(parts) >= 3 and any(term in parts[2].lower() for term in ['br', 'latam', 'americas', 'worldwide']):
+        if len(parts) >= 3 and any(term in parts[2].lower() for term in ['usa', 'europe']):
 
             match = re.search(r'\[([^\]]+)\]\(([^)]+)\)', parts[0])
             if match:
